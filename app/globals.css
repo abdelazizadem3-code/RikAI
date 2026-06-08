@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  @apply bg-dark-900 text-white overflow-x-hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-400;
+}
+
+/* Markdown styles */
+.markdown h1 {
+  @apply text-3xl font-bold text-white mb-4 mt-6;
+}
+
+.markdown h2 {
+  @apply text-2xl font-bold text-accent-400 mb-3 mt-5;
+}
+
+.markdown h3 {
+  @apply text-xl font-bold text-primary-400 mb-2 mt-4;
+}
+
+.markdown p {
+  @apply mb-4 leading-relaxed;
+}
+
+.markdown ul, .markdown ol {
+  @apply mb-4 pl-6;
+}
+
+.markdown li {
+  @apply mb-2;
+}
+
+.markdown code {
+  @apply bg-dark-800 px-2 py-1 rounded text-accent-400 text-sm font-mono;
+}
+
+.markdown pre {
+  @apply bg-dark-800 p-4 rounded-lg mb-4 overflow-x-auto;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0;
+}
+
+.markdown a {
+  @apply text-accent-400 hover:text-accent-300 underline;
+}
+
+.markdown strong {
+  @apply font-bold text-white;
+}
+
+.markdown em {
+  @apply italic;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-primary-500 pl-4 py-2 bg-dark-800 rounded my-4 text-gray-400;
+}
